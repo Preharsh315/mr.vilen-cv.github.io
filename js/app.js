@@ -2,12 +2,29 @@
 
 const bars = document.querySelectorAll('.progress__bar');
 
-bars.forEach(function (bar) {
-    let percentage = bar.dataset.percent;
-    let tooltip = bar.children[0];
-    tooltip.innerText = percentage + '%';
-    bar.style.width = percentage + '%';
-});
+function runbars() {
+    bars.forEach(function (bar) {
+        let percentage = bar.dataset.percent;
+        let tooltip = bar.children[0];
+        tooltip.innerText = percentage + '%';
+        bar.style.width = percentage + '%';
+    });
+}
+
+let barsSection = document.querySelector('.skills__wrapper');
+let option = {
+    rootMargin: '0px 0px -300px 0px'
+}
+
+const sectionObservers = new IntersectionObserver(function (entries) {
+
+    if (entries[0].isIntersecting) {
+        runbars();
+    }
+
+}, option)
+
+sectionObservers.observe(barsSection);
 
 // counter
 
