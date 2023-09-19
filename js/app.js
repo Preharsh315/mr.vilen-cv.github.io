@@ -41,7 +41,7 @@ function runCounter() {
 
 let counterSection = document.querySelector('.counter__section');
 let options = {
-    rootMargin: '0px 0px -150px 0px'
+    rootMargin: '0px 0px -300px 0px'
 }
 
 const sectionObserver = new IntersectionObserver(function (entries) {
