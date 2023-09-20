@@ -332,24 +332,24 @@
                     <div></div>
                 </div>
                 <div class="right">
-                    <form action="https://formsubmit.co/2e9b92af5ac4b3416ebdfcf3e984db31" method="POST">
+                    <form method="post">
                         <div class="form__group">
                             <div>
                                 <label for="">NAME :</label>
-                                <input type="text">
+                                <input type="text" id="name">
                             </div>
                             <div>
                                 <label for="">EMAIL :</label>
-                                <input type="email">
+                                <input type="email" id="email">
                             </div>
                         </div>
                         <div class="form__group textarea__wrapper">
                             <div>
                                 <label for="">MESSAGE :</label>
-                                <textarea name="" id="" cols="30" rows="4"></textarea>
+                                <textarea name="" id="message" cols="30" rows="4"></textarea>
                             </div>
                         </div>
-                        <button type="submit">Submit Now</button>
+                        <button type="submit" id="btn">Submit Now</button>
                     </form>
                 </div>
             </div>
@@ -361,6 +361,29 @@
         <div>&copy; Designed By PREHARSH PRABHAKAR</div>
     </footer>
 
+        <script>
+        var btn = document.getElementById('btn');
+btn.addEventListener('click',function(e) {
+    e.preventDefault()
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('messege').value;
+    var body = 'name: ' + name + '<br/> email: ' + email + '<br/> message: ' + message;
+
+
+    Email.send({
+        SecureToken : "4beb1d25-d113-4f0f-a74f-d39620e25427",
+        To : 'preharsh555555@gmail.com',
+        From : "mr.vilen-cv@gmail.com",
+        Subject : "Contact Message",
+        Body : body
+    }).then(
+      message => alert(message)
+    );
+})
+    </script>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
     <script src="./js/app.js"></script>
 </body>
 
