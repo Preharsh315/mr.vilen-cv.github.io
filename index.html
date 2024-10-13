@@ -19,7 +19,7 @@
                     MR.VILEN CV
                 </div>
                 <div>
-                    <button><a href="https://acrobat.adobe.com/link/track?uri=urn:aaid:scds:US:31d199ac-7dfb-458b-8ffc-7fded52465b6">
+                    <button><a href="https://acrobat.adobe.com/link/review?uri=urn:aaid:scds:US:1c32326c-5e0e-4fb3-87fb-4c126e6defdf">
                         <i class="fa-solid fa-print"></i>
                         Print
                     </a></button>
@@ -85,7 +85,7 @@
                 <div class="left">
                     <h2>I'm Preharsh Prabhakar</h2>
                     <p>I'm Engineering Student With branch Computer Science (CS). I'm also a Website Developer & I'm working on some Website Development. I have skills on some Famous Languages of Computer like C, C++, Python, Java, JavaScript, SQL, XML, HTML, CSS, PHP, Kotlin, React.js, Node.js. I'm also a Ethical Hacker, Now I'm learning AI & Robotics</p>
-                    <button><a href="https://acrobat.adobe.com/link/track?uri=urn:aaid:scds:US:31d199ac-7dfb-458b-8ffc-7fded52465b6">Download CV</a></button>
+                    <button><a href="https://acrobat.adobe.com/link/review?uri=urn:aaid:scds:US:1c32326c-5e0e-4fb3-87fb-4c126e6defdf">Download CV</a></button>
                 </div>
                 <div class="right">
                     <p>
@@ -131,9 +131,14 @@
                             <p>Krishna International School, Aligarh</p>
                         </div>
                         <div class="item">
-                            <p>2021 ~ Pursuing</p>
+                            <p>2021 ~ 2024</p>
                             <p class="center">Diploma</p>
                             <p>Vivekananda College of Technology & Management</p>
+                        </div>
+                        <div class="item">
+                            <p>2024 ~ Pursuing </p>
+                            <p class="center">B.tech</p>
+                            <p>Ajay Kumar Garg Engineering College</p>
                         </div>
                     </div>
                 </div>
@@ -361,20 +366,20 @@
         <div>&copy; Designed By PREHARSH PRABHAKAR</div>
     </footer>
 
-        <script>
+    <script>
         var btn = document.getElementById('btn');
 btn.addEventListener('click',function(e) {
     e.preventDefault()
     var name = document.getElementById('name').value;
     var email = document.getElementById('email').value;
-    var message = document.getElementById('message').value;
+    var message = document.getElementById('messege').value;
     var body = 'name: ' + name + '<br/> email: ' + email + '<br/> message: ' + message;
 
 
     Email.send({
         SecureToken : "4beb1d25-d113-4f0f-a74f-d39620e25427",
         To : 'preharsh555555@gmail.com',
-        From : "mfake8118@gmail.com",
+        From : "mr.vilen-cv@gmail.com",
         Subject : "Contact Message",
         Body : body
     }).then(
